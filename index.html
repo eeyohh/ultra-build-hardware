@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Ultra Build Hardware | Quality Hardware & Building Supplies | Johannesburg</title>
+    <meta name="description" content="Ultra Build Hardware supplies quality building materials, cement, paint, plumbing, electrical, tools, and hardware. Visit our walk-in store. Great prices, friendly service.">
+    <meta name="keywords" content="Ultra Build Hardware, hardware store Johannesburg, building supplies, cement, paint, plumbing, electrical, tools">
+    <meta name="author" content="Ultra Build Hardware">
+    
+    <!-- SSL / HTTPS Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Font Awesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #1a2c2e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        :root {
+            --primary: #1e3a8a;
+            --primary-dark: #1e2a6e;
+            --secondary: #b45309;
+            --dark: #1e293b;
+            --light-bg: #f8fafc;
+            --gray: #64748b;
+            --shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+        }
+
+        header {
+            background: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 16px 0;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .logo p {
+            font-size: 0.7rem;
+            color: var(--gray);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .header-phone {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .header-phone:hover {
+            background: var(--primary-dark);
+            transform: scale(1.02);
+        }
+
+        /* Hero Section with Background Image */
+        .hero {
+            background: linear-gradient(rgba(30, 58, 138, 0.55), rgba(30, 58, 138, 0.55)), url('images/hero-hardware.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+
+        .trust-badges {
+            background: var(--secondary);
+            color: white;
+            padding: 16px 0;
+        }
+
+        .trust-flex {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .trust-item i {
+            font-size: 1.4rem;
+            color: white;
+        }
+
+        section {
+            padding: 70px 0;
+            border-bottom: 1px solid #eef2f6;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: var(--secondary);
+            margin-top: 12px;
+            border-radius: 4px;
+        }
+
+        .section-sub {
+            color: var(--gray);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid #eef2f6;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+        }
+
+        .product-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            background-color: #e2e8f0;
+        }
+
+        .product-card h3 {
+            padding: 20px 20px 10px;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .product-card p {
+            padding: 0 20px 15px;
+            color: var(--gray);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+        }
+
+        .contact-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px;
+            margin-top: 30px;
+        }
+
+        .contact-form, .contact-info {
+            flex: 1;
+            background: var(--light-bg);
+            padding: 32px;
+            border-radius: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #cbd5e1;
+            border-radius: 16px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(30,58,138,0.1);
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 12px;
+            margin: 20px 0;
+            align-items: flex-start;
+        }
+
+        .checkbox-group input {
+            width: 20px;
+            margin-top: 2px;
+        }
+
+        .checkbox-group label {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .info-detail {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .info-detail i {
+            width: 45px;
+            height: 45px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+
+        /* WhatsApp Float - ALWAYS VISIBLE */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            text-decoration: none;
+            z-index: 9999;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: 0.2s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            background: #20b359;
+        }
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--dark);
+            color: white;
+            padding: 16px;
+            text-align: center;
+            z-index: 9998;
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: #94a3b8;
+            padding: 50px 0 24px;
+        }
+
+        .footer-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-col a {
+            color: #94a3b8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--secondary);
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #334155;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 12px;
+            color: white;
+            transition: 0.2s;
+        }
+
+        .social-icons a:hover {
+            background: var(--secondary);
+        }
+
+        .legal-links {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #334155;
+            font-size: 0.8rem;
+        }
+
+        .legal-links a {
+            margin: 0 12px;
+        }
+
+        @media (max-width: 800px) {
+            .hero h1 { font-size: 2rem; }
+            .header-flex { flex-direction: column; text-align: center; }
+            .nav-links { justify-content: center; }
+            .section-title:after { margin-left: auto; margin-right: auto; }
+            .section-title { text-align: center; }
+            .hero { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- WhatsApp button - ALWAYS VISIBLE - linked to 0677490814 (Ultra Build Hardware) -->
+<a href="https://wa.me/27677490814?text=Hello%20Ultra%20Build%20Hardware%2C%20I%20have%20a%20question%20about%20a%20product." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Cookie Consent Banner -->
+<div id="cookieBanner" class="cookie-banner">
+    <span>🍪 Ultra Build Hardware uses cookies to improve your experience. By using our site, you agree to our <a href="#" id="cookiePrivacyLink">Privacy Policy</a>.</span>
+    <button onclick="acceptCookies()">Accept</button>
+</div>
+
+<header>
+    <div class="container header-flex">
+        <div class="logo">
+            <h1>ULTRA BUILD <span>HARDWARE</span></h1>
+            <p>Quality Building Supplies • Hardware • Tools | Johannesburg</p>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <a href="#contact" class="header-phone"><i class="fas fa-phone-alt"></i> 067 749 0814</a>
+    </div>
+</header>
+
+<div class="trust-badges">
+    <div class="container trust-flex">
+        <div class="trust-item"><i class="fas fa-store"></i> Walk-in & Collect</div>
+        <div class="trust-item"><i class="fas fa-tools"></i> Quality Products</div>
+        <div class="trust-item"><i class="fas fa-chart-line"></i> Competitive Prices</div>
+        <div class="trust-item"><i class="fas fa-clock"></i> Open 7am-6:30pm</div>
+    </div>
+</div>
+
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Your Local Building Supply Store<br>in Johannesburg</h1>
+            <p>Quality cement, paint, plumbing, electrical supplies, tools, and hardware. Visit Ultra Build Hardware – great prices, helpful staff.</p>
+            <a href="https://wa.me/27677490814" class="btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+            <a href="https://www.google.com/maps/place/UltraBuild+Hardware/@-26.1922422,27.9942026" class="btn" style="background: transparent; border: 2px solid white; margin-left: 12px;" target="_blank"><i class="fas fa-store"></i> Visit Our Store</a>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <p class="section-sub">Quality supplies for contractors, builders, and DIY enthusiasts.</p>
+            <div class="products-grid">
+                <!-- Building Materials -->
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('images/cement.jpg');"></div>
+                    <h3>Building Materials</h3>
+                    <p>Quality cement, bricks, and construction materials for any project.</p>
+                </div>
+                <!-- Hardware -->
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('images/hardware.jpg');"></div>
+                    <h3>Hardware</h3>
+                    <p>Nails, screws, bolts, hinges, and general hardware supplies.</p>
+                </div>
+                <!-- Paint -->
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('images/paint.jpg');"></div>
+                    <h3>Paint</h3>
+                    <p>Premium quality paint for interior and exterior walls. Wide range of colours and finishes.</p>
+                </div>
+                <!-- Plumbing -->
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('images/plumbing.jpg');"></div>
+                    <h3>Plumbing Supplies</h3>
+                    <p>Pipes, fittings, valves, and accessories for all your plumbing needs.</p>
+                </div>
+                <!-- Electrical -->
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('images/electrical.jpg');"></div>
+                    <h3>Electrical Supplies</h3>
+                    <p>Cables, switches, sockets, lighting, and electrical accessories.</p>
+                </div>
+                <!-- Tools -->
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('images/tools.jpg');"></div>
+                    <h3>Tools</h3>
+                    <p>Hand tools, power tools, and tool accessories for every job.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title">Why Ultra Build Hardware</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Convenient Location</h3>
+                    <p>Easily accessible hardware and building supply store in Johannesburg.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Quality Building Supplies</h3>
+                    <p>We stock quality cement, bricks, and construction materials for any project.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-simple"></i>
+                    <h3>Competitive Prices</h3>
+                    <p>Affordable rates on all hardware, tools, and building supplies.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Expert Advice</h3>
+                    <p>Our knowledgeable staff helps you find the right product for your project.</p>
+                </div>
+            </div>
+
+            <h3 style="margin: 40px 0 20px; color: var(--primary);">Find Us</h3>
+            <div class="map-container">
+                <!-- EXACT GOOGLE MAPS EMBED FOR ULTRA BUILD HARDWARE using coordinates from the URL: -26.1922422, 27.9942026 -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.123456789!2d27.9942026!3d-26.1922422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950b096d31c2c9%3A0xed07516074ef65c9!2sUltraBuild%20Hardware!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0; border-radius:20px;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p style="margin-top: 15px; text-align: center;"><i class="fas fa-location-dot"></i> <strong>Ultra Build Hardware</strong> – View on Google Maps (exact location)</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-sub">Have a question about a product or need bulk pricing? Contact us.</p>
+            <div class="contact-flex">
+                <div class="contact-form">
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="product">
+                                <option value="">Select Product/Service</option>
+                                <option>Cement & Building Materials</option>
+                                <option>Hardware</option>
+                                <option>Paint</option>
+                                <option>Plumbing Supplies</option>
+                                <option>Electrical Supplies</option>
+                                <option>Tools</option>
+                                <option>Other (specify below)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="3" name="message" placeholder="Your question or the product you're looking for..."></textarea>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="popiaConsent" required>
+                            <label for="popiaConsent">I consent to Ultra Build Hardware collecting and storing my personal information to respond to my enquiry, as outlined in the <a href="#" id="popiaLink">Privacy Policy</a> (POPIA compliant).</label>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width:100%;"><i class="fas fa-paper-plane"></i> Send Enquiry</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <div class="info-detail"><i class="fas fa-phone-alt"></i> <a href="tel:0677490814">067 749 0814</a></div>
+                    <div class="info-detail"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/27677490814">067 749 0814 (WhatsApp)</a></div>
+                    <div class="info-detail"><i class="fas fa-envelope"></i> info@ultrabuildhardware.co.za</div>
+                    <div class="info-detail"><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/place/UltraBuild+Hardware/@-26.1922422,27.9942026" target="_blank">Johannesburg (view on Google Maps)</a></div>
+                    <hr>
+                    <h4>Business Hours</h4>
+                    <p>Monday - Sunday: 7:00am – 6:30pm</p>
+                    <hr>
+                    <p><strong>Walk-in only</strong> – Come visit our store! No delivery services available.</p>
+                    <p><em>⭐ Your trusted partner for building supplies</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-flex">
+            <div class="footer-col">
+                <h4>Ultra Build Hardware</h4>
+                <p>Quality building materials, hardware, and home improvement supplies in Johannesburg. Walk-in and collect.</p>
+                <p><strong>Information Officer:</strong> Store Manager</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="tel:0677490814"><i class="fas fa-phone"></i> 067 749 0814</a>
+                <a href="https://wa.me/27677490814"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="mailto:info@ultrabuildhardware.co.za"><i class="fas fa-envelope"></i> info@ultrabuildhardware.co.za</a>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/27677490814" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="legal-links">
+            <a href="#" id="footerPrivacyLink">Privacy Policy (POPIA)</a> |
+            <a href="#" id="footerTermsLink">Terms & Conditions (CPA)</a> |
+            <a href="#contact">Contact</a>
+            <p style="margin-top: 20px;">&copy; 2025 Ultra Build Hardware. All rights reserved. | POPIA Compliant</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // ============================================
+    // CONTACT DETAILS - Ultra Build Hardware
+    // ============================================
+    const COMPANY_PHONE = "0677490814";
+    const WHATSAPP_NUMBER = "27677490814";  // Format: 27 + number without leading 0
+    const COMPANY_EMAIL = "info@ultrabuildhardware.co.za";
+    
+    // ============================================
+    // SSL ENFORCEMENT (skip for local testing)
+    // ============================================
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost' && !location.hostname.includes('127.0.0.1') && !location.hostname.includes('file://')) {
+        location.href = 'https://' + location.hostname + location.pathname + location.search;
+    }
+    
+    // ============================================
+    // COOKIE CONSENT
+    // ============================================
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            let date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/; Secure; SameSite=Strict";
+    }
+    
+    function getCookie(name) {
+        let nameEQ = name + "=";
+        let ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+    
+    window.acceptCookies = function() {
+        setCookie("cookies_accepted", "true", 365);
+        document.getElementById("cookieBanner").style.display = "none";
+    };
+    
+    window.onload = function() {
+        if (!getCookie("cookies_accepted")) {
+            document.getElementById("cookieBanner").style.display = "flex";
+        }
+    };
+    
+    // ============================================
+    // POPIA CONSENT & FORM HANDLING (leads to WhatsApp)
+    // ============================================
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const consent = document.getElementById('popiaConsent');
+            if (!consent.checked) {
+                alert("Please consent to the Privacy Policy (POPIA requirement) before submitting.");
+                return false;
+            }
+            
+            const name = document.querySelector('[name="name"]').value;
+            const email = document.querySelector('[name="email"]').value;
+            const phone = document.querySelector('[name="phone"]').value;
+            const product = document.querySelector('[name="product"]').value;
+            const message = document.querySelector('[name="message"]').value;
+            
+            const leadMessage = `🏗️ *NEW LEAD - Ultra Build Hardware Website*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Product/Service:* ${product}%0A*Message:* ${message}%0A%0APlease reply to this customer.`;
+            
+            const ownerWhatsApp = WHATSAPP_NUMBER;
+            const waLink = `https://wa.me/${ownerWhatsApp}?text=${leadMessage}`;
+            window.open(waLink, '_blank');
+            
+            alert("Thank you! We'll contact you shortly via WhatsApp.");
+            form.reset();
+        });
+    }
+    
+    // ============================================
+    // POPIA & TERMS PAGES (displays inline info)
+    // ============================================
+    function showPrivacyPolicy() {
+        alert(`📜 PRIVACY POLICY (POPIA Compliant)
+        
+Ultra Build Hardware respects your privacy. We collect your name, email, and phone number only to respond to your enquiries. Your information is never shared with third parties without consent.
+
+Information Officer: Store Manager
+Email: ${COMPANY_EMAIL}
+Phone: ${COMPANY_PHONE}
+
+You have the right to access, correct, or delete your personal data. Contact us for any requests.`);
+    }
+    
+    function showTerms() {
+        alert(`📋 TERMS & CONDITIONS (CPA Compliant)
+        
+1. Walk-in store only – no delivery services available.
+2. Prices subject to change without notice.
+3. Returns within 14 days with valid proof of purchase.
+4. Products must be in original packaging.
+5. Disputes: Refer to Good-faith negotiation.`);
+    }
+    
+    // Attach privacy/terms events if elements exist
+    const cookieLink = document.getElementById('cookiePrivacyLink');
+    if (cookieLink) cookieLink.addEventListener('click', (e) => { e.preventDefault(); showPrivacyPolicy(); });
+    
+    const popiaLink = document.getElementById('popiaLink');
+    if (popiaLink) popiaLink.addEventListener('click', (e) => { e.preventDefault(); showPrivacyPolicy(); });
+    
+    const footerPrivacy = document.getElementById('footerPrivacyLink');
+    if (footerPrivacy) footerPrivacy.addEventListener('click', (e) => { e.preventDefault(); showPrivacyPolicy(); });
+    
+    const footerTerms = document.getElementById('footerTermsLink');
+    if (footerTerms) footerTerms.addEventListener('click', (e) => { e.preventDefault(); showTerms(); });
+    
+    // Smooth scroll for navigation (prevents default for hash links)
+    document.querySelectorAll('.nav-links a, .btn[href^="#"], .header-phone[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    // update active nav link styling
+                    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+                    const matchingNav = document.querySelector(`.nav-links a[href="${href}"]`);
+                    if (matchingNav) matchingNav.classList.add('active');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
